@@ -1,0 +1,68 @@
+ /* 1  4  9  18 27*/
+ body {
+     background-image: url(../backgrounds/16.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     position: relative;
+     height: 100vh;
+     width: 100vw;
+
+ }
+
+ body::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(72, 67, 67, 0.6);
+     z-index: -1;
+ }
+
+ .mainCard {
+     background-color: rgba(110, 110, 110, 0.25);
+     box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.3);
+     border: 0.1rem solid rgba(255, 255, 255, 0.18);
+ }
+
+ .mainCardHead i {
+     left: 30%;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+ }
+
+ .mainCardHead i:hover {
+     color: #007BFF;
+ }
+
+ .searchBox {
+     width: fit-content;
+ }
+
+ .searchBox i {
+     left: 15px;
+     cursor: pointer;
+ }
+
+ .mainCardContentLeft>i {
+     font-size: 100px;
+ }
+
+ .mainCardTempCards {
+     max-width: fit-content; 
+     overflow-x: auto;
+     overflow-y: visible;
+     white-space: nowrap;
+    }
+
+ .tempCard {
+    box-sizing: border-box;
+     margin-inline: 1rem;
+     width: 120 !important;
+     height: 100px;
+     margin-bottom: 10px;
+     box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.3);
+     border: 0.1rem solid rgba(255, 255, 255, 0.18);
+ }

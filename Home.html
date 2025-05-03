@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard </title>
+    <link rel="icon" href="imgs/logo.svg">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/Home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <section>
+        <div id="homePage" class="container ">
+            <div class="row">
+                <div class="mainCard col-8 text-center mt-5   rounded-5 text-white offset-2 p-5">
+                    <div class="mainCardHead position-relative ">
+                        <i class="bi bi-geo-alt me-2 position-absolute fs-4 "></i>
+                        <div class="searchBox position-relative m-auto ">
+                            <i class="bi bi-search  position-absolute top-50 translate-middle-y "></i>
+                            <input id="searchInput" type="search"
+                                class="form-control w-100 text-white bg-transparent border-2 border-white rounded-5 ps-5 m-auto"
+                                placeholder="Enter city name" aria-label="City name">
+                        </div>
+                    </div>
+                    <div class="mainCardContent d-flex w-100 justify-content-between mt-4 pb">
+                        <div class="mainCardContentLeft d-flex flex-column justify-content-start align-items-start">
+                            <h1 id="cityName" class="fs-1 my-3">City Name</h1>
+                            <h2 id="countryName" class="fs-4 my-2">Country Name</h2>
+                            <h3 id="date" class="fs-5 mt-3">Date</h3>
+                            <i id="weatherIcon" class="bi bi-cloud-fill text-primary"></i>
+                            <h2 id="weatherCondition">slightly cloudy <i class="bi bi-cloud-sun-fill"></i></h2>
+                        </div>
+                        <div class="mainCardContentRight d-flex flex-column align-items-end align-content-between">
+                            <h1 id="temperature" class="fs-1 my-3 ">31°</h1>
+                            <h3 id="weatherDescription" class="fs-5 my-1 pb-4">34° / 21° </h3>
+                            <h3 id="humidity" class="fs-5 my-4 pt-4">Humidity: 60% <i
+                                    class="bi bi-droplet-fill text-primary ms-1"></i></h3>
+                            <h3 id="windSpeed" class="fs-5 my-4">Wind Speed: 10 km/h <i
+                                    class="bi bi-wind text-primary fs-3 ms-1"></i></h3>
+                            <h3 id="pressure" class="fs-5 my-4">Pressure: 1012 hPa <i
+                                    class="bi bi-cloud-haze2 text-primary ms-1"></i></h3>
+                        </div>
+                    </div>
+                    <div class="mainCardTempCards d-flex justify-content-start mt-2">
+
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">1:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-cloud-haze2 text-white fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">2:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-cloud-fill text-white fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">3:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">4:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-wind text-white fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">5:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">6:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">7:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">8:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">9:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">10:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">11:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 PM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        <div class="tempCard rounded-3 p-3">
+                            <h4 id="dayTime" class="fs-5 mb-3">12:00 AM</h4>
+                            <div id="dayTemp">
+                                <h4 id="dayTempValue" class="fs-5 my-2">34° 
+                                    <i id="dayTempIcon" class="bi bi-sun-fill text-warning fs-4"></i></h4>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="tempCardContent d-flex justify-content-between align-items-center">
+                                <div class="tempCardContentLeft d-flex flex-column align-items-start">
+                                    <h2 id="todayMax" class= "fs-4 my-2">Max: 34°</h2>
+                                    <h2 id="todayMin" class= "fs-4 my-2">Min: 21°</h2>
+                                </div>
+                                <div class="tempCardContentRight d-flex flex-column align-items-end">
+                                    <i id="todayIcon" class="bi bi-cloud-sun-fill text-primary"></i>
+                                </div>
+                            </div> -->
+
+
+
+    <script src=""></script> <!-- make refrence to the JS file -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
