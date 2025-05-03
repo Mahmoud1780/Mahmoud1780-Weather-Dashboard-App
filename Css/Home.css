@@ -7,7 +7,9 @@
      position: relative;
      height: 100vh;
      width: 100vw;
-
+     background-color: rgba(110, 110, 110, 0.25);
+     box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.3);
+     border: 0.1rem solid rgba(255, 255, 255, 0.18);
  }
 
  body::after {
@@ -24,7 +26,7 @@
  .mainCard {
      background-color: rgba(110, 110, 110, 0.25);
      box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.3);
-     border: 0.1rem solid rgba(255, 255, 255, 0.18);
+     border: 2px solid rgba(255, 255, 255, 0.18);
  }
 
  .mainCardHead i {
@@ -55,14 +57,14 @@
      overflow-x: auto;
      overflow-y: visible;
      white-space: nowrap;
+     height : 200px;
     }
 
  .tempCard {
     box-sizing: border-box;
-     margin-inline: 1rem;
+     margin-inline: 5px;
      width: 120 !important;
-     height: 100px;
-     margin-bottom: 10px;
-     box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.3);
-     border: 0.1rem solid rgba(255, 255, 255, 0.18);
+     height: 150px;
+     margin-bottom: 5px;
+     border: 5px solid rgba(255, 255, 255, 0.18);
  }
