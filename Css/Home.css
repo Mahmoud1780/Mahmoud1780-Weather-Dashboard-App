@@ -1,4 +1,18 @@
  /* 1  4  9  18 27*/
+ .fs-7 {
+     font-size: 0.8rem;
+ }
+
+ .fs-0 {
+     font-size: 3rem;
+ }
+
+ @media (min-width: 768px) {
+     .fs-0 {
+         font-size: 3.5rem;
+     }
+ }
+
  body {
      background-image: url(../backgrounds/16.jpg);
      background-size: cover;
@@ -53,18 +67,32 @@
  }
 
  .mainCardTempCards {
-     max-width: fit-content; 
+     max-width: fit-content;
      overflow-x: auto;
      overflow-y: visible;
      white-space: nowrap;
-     height : 200px;
-    }
+     height: 200px;
+ }
 
  .tempCard {
-    box-sizing: border-box;
+     box-sizing: border-box;
      margin-inline: 5px;
      width: 120 !important;
      height: 150px;
      margin-bottom: 5px;
      border: 5px solid rgba(255, 255, 255, 0.18);
  }
+
+ /* Add this to your CSS file */
+#searchInput {
+    color: white !important;
+  }
+  
+  #searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  /* For the clear (X) button in search input */
+  #searchInput::-webkit-search-cancel-button {
+    filter: brightness(0) invert(1);
+  }

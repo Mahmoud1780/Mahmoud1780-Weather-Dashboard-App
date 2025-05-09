@@ -1,261 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Weather Dashboard</title>
-    <link
-      rel="icon"
-      href="imgs/logo.svg"
-    />
-    <link
-      rel="stylesheet"
-      href="Css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="Css/Home.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="Css/all.css"
-    />
-  </head>
 
-  <body>
-    <section>
-      <div class="mainCardHead d-flex justify-content-center align-items-center mt-5">
-        <i
-          id="usrLocation"
-          type="button"
-          class="bi bi-geo-alt d-flex fs-4 me-2"
-        ></i>
-        <div class="searchBox position-relative">
-          <i
-            id="searchButton"
-            class="bi bi-search position-absolute top-50 translate-middle-y"
-          ></i>
-          <input
-            id="searchInput"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="icon" href="imgs/logo.svg" />
+  <link rel="stylesheet" href="Css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Css/Home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="Css/all.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center mt-3 mt-md-5">
+      <div class="mainCardHead col-12 col-md-8 col-lg-6 col-xl-4 d-flex align-items-center">
+        <i id="usrLocation" type="button" class="bi bi-geo-alt fs-3 fs-md-2 me-2 me-md-3 text-white"></i>
+        <div class="searchBox position-relative flex-grow-1">
+          <i id="searchButton" class="bi bi-search position-absolute top-50 translate-middle-y text-white"></i>
+          <input id="searchInput" 
             type="search"
-            class="form-control w-100 text-white bg-transparent border-2 border-white rounded-5 ps-5 m-auto"
-            placeholder="Enter city name"
-            aria-label="City name"
-          />
+            class="form-control w-100 text-white bg-transparent border-2 border-white rounded-5 ps-5"
+            placeholder="Enter city name" 
+            aria-label="City name" />
         </div>
       </div>
-      <div
-        class="alert alert-danger w-50 d-none text-center mx-auto mt-5"
-        id="alert"
-      >
-        Enter a valid city name!
-      </div>
-      <div
-        id="homePage"
-        class="container d-none"
-      >
-        <div class="row">
-          <div class="mainCard card col-8 text-center mt-4 rounded-5 text-white offset-2 p-5">
-            <div class="mainCardContent d-flex w-100 justify-content-between">
-              <div class="mainCardContentLeft d-flex flex-column align-items-start gap-3">
-                <h1
-                  id="cityName"
-                  class="fs-1"
-                >
-                  City Name
-                </h1>
-                <h2
-                  id="countryName"
-                  class="fs-4"
-                >
-                  Country Name
-                </h2>
-                <h3
-                  id="date"
-                  class="fs-5"
-                >
-                  Date
-                </h3>
-                <div class="d-flex align-items-center gap-2">
-                  <h2 id="weatherCondition">slightly cloudy</h2>
-                  <img
-                    id="weatherIcon"
-                    class="bi bi-cloud-fill text-primary"
-                  />
-                </div>
-              </div>
-              <div class="mainCardContentRight d-flex flex-column align-items-end gap-4">
-                <h1
-                  id="temperature"
-                  class="fs-1"
-                >
-                  31°
-                </h1>
-                <div class="d-flex align-items-center gap-2">
-                  <h3 class="fs-5">Max/Min:</h3>
-                  <h3
-                    id="weatherDescription"
-                    class="fs-5"
-                  >
-                    34° / 21°
-                  </h3>
-                </div>
-
-                <div class="d-flex align-items-center gap-2">
-                  <h3 class="fs-5">Humidity:</h3>
-                  <h3
-                    id="humidity"
-                    class="fs-5"
-                  >
-                    60% <i class="bi bi-droplet-fill text-primary ms-1"></i>
-                  </h3>
-                </div>
-
-                <div class="d-flex align-items-center gap-2">
-                  <h3 class="fs-5">Wind Speed:</h3>
-                  <h3
-                    id="windSpeed"
-                    class="fs-5"
-                  >
-                    10 km/h <i class="bi bi-wind text-primary fs-3 ms-1"></i>
-                  </h3>
-                </div>
-              </div>
+    </div>
+  </div>
+  
+  <div class="alert alert-danger w-75 w-md-50 d-none text-center mx-auto mt-3 mt-md-5 fs-5" id="alert">
+    Enter a valid city name!
+  </div>
+  <div id="homePage" class="container d-none">
+    <div class="row">
+      <div class="mainCard card col-12 col-lg-10 col-xl-8 text-center mt-3 mt-md-4 rounded-5 text-white offset-lg-1 offset-xl-2 p-3 p-md-5">
+        <div class="mainCardContent d-flex flex-column flex-md-row w-100 justify-content-between">
+          <div class="mainCardContentLeft d-flex flex-column align-items-start gap-2 gap-md-3 mb-3 mb-md-0">
+            <h1 id="cityName" class="fs-1 fs-md-0">
+              City Name
+            </h1>
+            <h2 id="countryName" class="fs-4 fs-md-3">
+              Country Name
+            </h2>
+            <h3 id="date" class="fs-5 fs-md-4">
+              Date
+            </h3>
+            <div class="d-flex align-items-center gap-1 gap-md-2">
+              <h2 id="weatherCondition" class="fs-5 fs-md-4">slightly cloudy</h2>
+              <img id="weatherIcon" class="bi bi-cloud-fill text-primary" style="width: 2rem; height: 2rem;" />
             </div>
-            <div class="mainCardTempCards d-flex justify-content-start mx-auto w-100 mt-3">
-              <div
-                type="button"
-                class="btn btn-outline-light tempCard rounded-3 p-3"
-                onclick="enlarge(1)"
-              >
-                <p
-                  id="dayTime1"
-                  class="fs-6"
-                ></p>
-                <div id="dayTemp">
-                  <p
-                    id="dayTempValue1"
-                    class="fs-7"
-                  ></p>
-                  <img
-                    id="dayTempIcon1"
-                    style="width: 40px; height: 40px"
-                    class="d-inline"
-                  />
-                </div>
-              </div>
+          </div>
+          <div class="mainCardContentRight d-flex flex-column align-items-end gap-2 gap-md-4">
+            <h1 id="temperature" class="fs-1 fs-md-0">
+              31°
+            </h1>
+            <div class="d-flex align-items-center gap-1 gap-md-2">
+              <h3 class="fs-5 fs-md-4">Max/Min:</h3>
+              <h3 id="weatherDescription" class="fs-5 fs-md-4">
+                34° / 21°
+              </h3>
+            </div>
 
-              <div
-                type="button"
-                class="btn btn-outline-light tempCard rounded-3 p-3"
-                onclick="enlarge(2)"
-              >
-                <p
-                  id="dayTime2"
-                  class="fs-6"
-                ></p>
-                <div id="dayTemp">
-                  <p
-                    id="dayTempValue2"
-                    class="fs-7"
-                  ></p>
-                  <img
-                    id="dayTempIcon2"
-                    style="width: 40px; height: 40px"
-                    class="d-inline"
-                  />
-                </div>
-              </div>
+            <div class="d-flex align-items-center gap-1 gap-md-2">
+              <h3 class="fs-5 fs-md-4">Humidity:</h3>
+              <h3 id="humidity" class="fs-5 fs-md-4">
+                60% <i class="bi bi-droplet-fill text-primary ms-1"></i>
+              </h3>
+            </div>
 
-              <div
-                type="button"
-                class="btn btn-outline-light tempCard rounded-3 p-3"
-                onclick="enlarge(3)"
-              >
-                <p
-                  id="dayTime3"
-                  class="fs-6"
-                ></p>
-                <div id="dayTemp">
-                  <p
-                    id="dayTempValue3"
-                    class="fs-7"
-                  ></p>
-                  <img
-                    id="dayTempIcon3"
-                    style="width: 40px; height: 40px"
-                    class="d-inline"
-                  />
-                </div>
-              </div>
+            <div class="d-flex align-items-center gap-1 gap-md-2">
+              <h3 class="fs-5 fs-md-4">Wind Speed:</h3>
+              <h3 id="windSpeed" class="fs-5 fs-md-4">
+                10 km/h <i class="bi bi-wind text-primary fs-4 fs-md-3 ms-1"></i>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="mainCardTempCards d-flex justify-content-start mx-auto w-100 mt-2 mt-md-3">
+          <div type="button" class="btn btn-outline-light tempCard rounded-3 p-2 p-md-3" onclick="enlarge(1)">
+            <p id="dayTime1" class="fs-6 fs-md-5 mb-1 mb-md-0"></p>
+            <div id="dayTemp">
+              <p id="dayTempValue1" class="fs-7 fs-md-6"></p>
+              <img id="dayTempIcon1" style="width: 40px; height: 40px" class="d-inline" />
+            </div>
+          </div>
 
-              <div
-                type="button"
-                class="btn btn-outline-light tempCard rounded-3 p-3"
-                onclick="enlarge(4)"
-              >
-                <p
-                  id="dayTime4"
-                  class="fs-6"
-                ></p>
-                <div id="dayTemp">
-                  <p
-                    id="dayTempValue4"
-                    class="fs-7"
-                  ></p>
-                  <img
-                    id="dayTempIcon4"
-                    style="width: 40px; height: 40px"
-                    class="d-inline"
-                  />
-                </div>
-              </div>
+          <div type="button" class="btn btn-outline-light tempCard rounded-3 p-2 p-md-3" onclick="enlarge(2)">
+            <p id="dayTime2" class="fs-6 fs-md-5 mb-1 mb-md-0"></p>
+            <div id="dayTemp">
+              <p id="dayTempValue2" class="fs-7 fs-md-6"></p>
+              <img id="dayTempIcon2" style="width: 40px; height: 40px" class="d-inline" />
+            </div>
+          </div>
 
-              <div
-                type="button"
-                class="btn btn-outline-light tempCard rounded-3 p-3"
-                onclick="enlarge(5)"
-              >
-                <p
-                  id="dayTime5"
-                  class="fs-6"
-                ></p>
-                <div id="dayTemp">
-                  <p
-                    id="dayTempValue5"
-                    class="fs-7"
-                  ></p>
-                  <img
-                    id="dayTempIcon5"
-                    style="width: 40px; height: 40px"
-                    class="d-inline"
-                  />
-                </div>
-              </div>
+          <div type="button" class="btn btn-outline-light tempCard rounded-3 p-2 p-md-3" onclick="enlarge(3)">
+            <p id="dayTime3" class="fs-6 fs-md-5 mb-1 mb-md-0"></p>
+            <div id="dayTemp">
+              <p id="dayTempValue3" class="fs-7 fs-md-6"></p>
+              <img id="dayTempIcon3" style="width: 40px; height: 40px" class="d-inline" />
+            </div>
+          </div>
+
+          <div type="button" class="btn btn-outline-light tempCard rounded-3 p-2 p-md-3" onclick="enlarge(4)">
+            <p id="dayTime4" class="fs-6 fs-md-5 mb-1 mb-md-0"></p>
+            <div id="dayTemp">
+              <p id="dayTempValue4" class="fs-7 fs-md-6"></p>
+              <img id="dayTempIcon4" style="width: 40px; height: 40px" class="d-inline" />
+            </div>
+          </div>
+
+          <div type="button" class="btn btn-outline-light tempCard rounded-3 p-2 p-md-3" onclick="enlarge(5)">
+            <p id="dayTime5" class="fs-6 fs-md-5 mb-1 mb-md-0"></p>
+            <div id="dayTemp">
+              <p id="dayTempValue5" class="fs-7 fs-md-6"></p>
+              <img id="dayTempIcon5" style="width: 40px; height: 40px" class="d-inline" />
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- <div class="tempCardContent d-flex justify-content-between align-items-center">
-                                <div class="tempCardContentLeft d-flex flex-column align-items-start">
-                                    <h2 id="todayMax" class= "fs-4 my-2">Max: 34°</h2>
-                                    <h2 id="todayMin" class= "fs-4 my-2">Min: 21°</h2>
-                                </div>
-                                <div class="tempCardContentRight d-flex flex-column align-items-end">
-                                    <i id="todayIcon" class="bi bi-cloud-sun-fill text-primary"></i>
-                                </div>
-                            </div> -->
 
-    <script src="script.js"></script>
-    <script src="JS/bootstrap.js"></script>
-  </body>
+  <script src="script.js"></script>
+  <script src="JS/bootstrap.js"></script>
+</body>
+
 </html>
