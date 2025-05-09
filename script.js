@@ -51,12 +51,7 @@ async function getWeather(location) {
 
 //show data to the user with the 5 day forecast
 async function showData(location){
-    if(location === "") {
-        showAlert();
-        hideHomePage();
-        return;
-    }
-    if(location.length < 3) {
+    if(location === "" || location.length < 3) {
         showAlert();
         hideHomePage();
         return;
