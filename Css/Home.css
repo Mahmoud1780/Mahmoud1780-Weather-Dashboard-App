@@ -83,7 +83,6 @@
      border: 5px solid rgba(255, 255, 255, 0.18);
  }
 
- /* Add this to your CSS file */
 #searchInput {
     color: white !important;
   }
@@ -92,7 +91,6 @@
     color: rgba(255, 255, 255, 0.7) !important;
   }
   
-  /* For the clear (X) button in search input */
   #searchInput::-webkit-search-cancel-button {
     filter: brightness(0) invert(1);
   }
